@@ -1,10 +1,10 @@
-# PixelDream-2D
+# Pixel Dream 2D
 A 2d Game Framework built on top of MonoGame
 
 This is my attempt at making a bare-bones game framework on top of MonoGame. 
 Is it object-oriented?
-- Well sort of
-- Your game object will inherit from the classes of this framework
+- Well sort of.
+- Your game object will inherit from the classes of this framework.
 
 Is it an entity component system?
 - Well sort of.
@@ -16,3 +16,4 @@ Can it do 3D?
 Inspired by 
 * [Sparkle](https://github.com/MrScautHD/Sparkle)
 * [Nez](https://github.com/prime31/Nez)
+* [Godot](https://github.com/godotengine/godot)
