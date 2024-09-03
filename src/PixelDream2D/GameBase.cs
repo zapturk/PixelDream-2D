@@ -8,14 +8,12 @@ public class GameBase : Game
 {
     // private Canvas canvas;
     private GraphicsDeviceManager graphics;
-    private SpriteBatch spriteBatch;
-    public static GameBase Instance { get; private set; }
+    public SpriteBatch spriteBatch;
     public readonly GameSettings Settings;
 
     public GameBase(GameSettings settings)
     {
-        Instance = this;
-        graphics = new GraphicsDeviceManager(Instance);
+        graphics = new GraphicsDeviceManager(this);
         Settings = settings;
         Content.RootDirectory = Settings.ContentRoot;
         IsMouseVisible = true;
