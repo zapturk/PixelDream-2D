@@ -3,18 +3,18 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace PixelDream2D.Models;
 
-public abstract class Component : Disposable {
-    
+public abstract class Property : Disposable {
+
     protected internal Entity owningEntity { get; internal set; }
 
     protected internal string name { get; internal set; }
 
     public bool HasInitialized { get; private set; }
-    
-    public Component(Entity entity) {
+
+    protected Property(Entity entity) {
         owningEntity = entity;
     }
-    
+
     protected internal virtual void Init() {
         HasInitialized = true;
     }
@@ -25,7 +25,7 @@ public abstract class Component : Disposable {
 
     protected override void Dispose(bool disposing) {
         if (disposing) {
-            owningEntity.Components.Remove(GetType());
+            owningEntity.Properties.Remove(GetType());
         }
     }
 }

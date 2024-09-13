@@ -1,12 +1,14 @@
 using Microsoft.Xna.Framework;
 using PixelDream2D.Models;
 
-public class Position : Component
+namespace PixelDream2D.Properties;
+
+public class Position : Property
 {
     /// <summary>
     /// The value of the position
     /// </summary>
-    private Vector2 value = Vector2.Zero;
+    private Vector2 value;
 
     public Position(Entity entity, Vector2 pos) : base(entity)
     {

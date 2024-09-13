@@ -1,13 +1,15 @@
 using PixelDream2D.Models;
 
-public class Visible : Component
+namespace PixelDream2D.Properties;
+
+public class Visible : Property
 {
     /// <summary>
     /// Indicates if the entity is visible or not
     /// </summary>
     private bool value = true;
 
-    public Visible(Entity entity, bool visible) : base(entity) { 
+    public Visible(Entity entity, bool visible) : base(entity) {
         value = visible;
         name = "Visible";
     }

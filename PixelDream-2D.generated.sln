@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CF1C27D5-8DE9-4AD0-AC17-E9D5DE2B5149}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D93BF5E1-20F3-4890-ADC9-241D68DC75B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PixelDream2D", "src\PixelDream2D\PixelDream2D.csproj", "{22A867D5-B698-44CD-9572-30A037FC4A07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PixelDream2D", "src\PixelDream2D\PixelDream2D.csproj", "{B3DA7022-354E-4C5C-9F46-A9F6B09C9390}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PixelDream2D.Test", "src\PixelDream2D.Test\PixelDream2D.Test.csproj", "{A3431EBF-1A75-4D24-9403-4939E90B7A03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PixelDream2D.Test", "src\PixelDream2D.Test\PixelDream2D.Test.csproj", "{CA3C736A-33F3-47B7-BE39-2A060D23AA4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,21 +15,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{22A867D5-B698-44CD-9572-30A037FC4A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22A867D5-B698-44CD-9572-30A037FC4A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22A867D5-B698-44CD-9572-30A037FC4A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22A867D5-B698-44CD-9572-30A037FC4A07}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3431EBF-1A75-4D24-9403-4939E90B7A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3431EBF-1A75-4D24-9403-4939E90B7A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3431EBF-1A75-4D24-9403-4939E90B7A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3431EBF-1A75-4D24-9403-4939E90B7A03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3DA7022-354E-4C5C-9F46-A9F6B09C9390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3DA7022-354E-4C5C-9F46-A9F6B09C9390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3DA7022-354E-4C5C-9F46-A9F6B09C9390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3DA7022-354E-4C5C-9F46-A9F6B09C9390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA3C736A-33F3-47B7-BE39-2A060D23AA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3C736A-33F3-47B7-BE39-2A060D23AA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3C736A-33F3-47B7-BE39-2A060D23AA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3C736A-33F3-47B7-BE39-2A060D23AA4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{22A867D5-B698-44CD-9572-30A037FC4A07} = {CF1C27D5-8DE9-4AD0-AC17-E9D5DE2B5149}
-		{A3431EBF-1A75-4D24-9403-4939E90B7A03} = {CF1C27D5-8DE9-4AD0-AC17-E9D5DE2B5149}
+		{B3DA7022-354E-4C5C-9F46-A9F6B09C9390} = {D93BF5E1-20F3-4890-ADC9-241D68DC75B2}
+		{CA3C736A-33F3-47B7-BE39-2A060D23AA4C} = {D93BF5E1-20F3-4890-ADC9-241D68DC75B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F1C609A-361F-40B9-9482-4B2B97027B47}
