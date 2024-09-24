@@ -7,22 +7,22 @@ public class Visible : Property
     /// <summary>
     /// Indicates if the entity is visible or not
     /// </summary>
-    private bool value = true;
+    private bool _value = true;
 
     public Visible(Entity entity, bool visible) : base(entity) {
-        value = visible;
-        name = "Visible";
+        _value = visible;
+        Name = "Visible";
     }
 
     public void Hide(){
-        value = false;
+        _value = false;
     }
 
     public void Show(){
-        value = true;
+        _value = true;
     }
 
     public bool IsVisible(){
-        return value;
+        return _value;
     }
 }

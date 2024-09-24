@@ -7,13 +7,13 @@ namespace PixelDream2D;
 public class GameBase : Game
 {
     // private Canvas canvas;
-    private GraphicsDeviceManager graphics;
+    private GraphicsDeviceManager _graphics;
     public SpriteBatch spriteBatch;
     public readonly GameSettings Settings;
 
     public GameBase(GameSettings settings)
     {
-        graphics = new GraphicsDeviceManager(this);
+        _graphics = new GraphicsDeviceManager(this);
         Settings = settings;
         Content.RootDirectory = Settings.ContentRoot;
         IsMouseVisible = true;

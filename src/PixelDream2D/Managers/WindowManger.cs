@@ -9,40 +9,40 @@ namespace PixelDream2D.Managers;
 /// </summary>
 public static class WindowManger
 {
-    private static GraphicsDeviceManager graphics;
-    private static GameBase gameBase;
-    private static Canvas canvas;
+    private static GraphicsDeviceManager _graphics;
+    private static GameBase _gameBase;
+    private static Canvas _canvas;
 
     public static void Init(GameBase game, GraphicsDeviceManager graphics, Canvas canvas)
     {
-        gameBase = game;
-        WindowManger.graphics = graphics;
-        WindowManger.canvas = canvas;
-        SetResolution(gameBase.Settings.Width, gameBase.Settings.Height);
+        _gameBase = game;
+        _graphics = graphics;
+        _canvas = canvas;
+        SetResolution(_gameBase.Settings.Width, _gameBase.Settings.Height);
     }
 
     public static void Update()
     {
-        if (!gameBase.Window.IsBorderless)
-            SetResolution(gameBase.GraphicsDevice.Viewport.Width, gameBase.GraphicsDevice.Viewport.Height);
+        if (!_gameBase.Window.IsBorderless)
+            SetResolution(_gameBase.GraphicsDevice.Viewport.Width, _gameBase.GraphicsDevice.Viewport.Height);
     }
 
     public static void SetResolution(int height, int width)
     {
-        graphics.PreferredBackBufferWidth = height;
-        graphics.PreferredBackBufferHeight = width;
-        gameBase.Window.IsBorderless = false;
-        graphics.ApplyChanges();
-        canvas.SetDestinationRectangle();
+        _graphics.PreferredBackBufferWidth = height;
+        _graphics.PreferredBackBufferHeight = width;
+        _gameBase.Window.IsBorderless = false;
+        _graphics.ApplyChanges();
+        _canvas.SetDestinationRectangle();
     }
 
     private static void SetFullScreen()
     {
-        graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-        graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-        gameBase.Window.IsBorderless = true;
-        graphics.ApplyChanges();
-        canvas.SetDestinationRectangle();
+        _graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+        _graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+        _gameBase.Window.IsBorderless = true;
+        _graphics.ApplyChanges();
+        _canvas.SetDestinationRectangle();
     }
 
     /// <summary>
@@ -50,9 +50,9 @@ public static class WindowManger
     /// </summary>
     public static void ToggleFullScreen()
     {
-        if (gameBase.Window.IsBorderless)
+        if (_gameBase.Window.IsBorderless)
         {
-            SetResolution(gameBase.Settings.Width, gameBase.Settings.Height);
+            SetResolution(_gameBase.Settings.Width, _gameBase.Settings.Height);
         }
         else
         {

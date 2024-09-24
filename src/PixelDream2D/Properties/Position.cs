@@ -8,22 +8,22 @@ public class Position : Property
     /// <summary>
     /// The value of the position
     /// </summary>
-    private Vector2 value;
+    private Vector2 _value;
 
     public Position(Entity entity, Vector2 pos) : base(entity)
     {
-        value = pos;
-        name = "Position";
+        _value = pos;
+        Name = "Position";
     }
 
-    public Vector2 getPosition()
+    public Vector2 GetPosition()
     {
-        return value;
+        return _value;
     }
 
-    public void setPosition(Vector2 pos)
+    public void SetPosition(Vector2 pos)
     {
-        value = pos;
+        _value = pos;
     }
 
 }

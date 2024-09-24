@@ -55,12 +55,12 @@ public abstract class Entity : Disposable
 
         if (!property.HasInitialized)
         {
-            property.owningEntity = this;
+            property.OwningEntity = this;
             property.Init();
         }
         else
         {
-            Console.WriteLine($"This property has already been added to a different Entity[{property.owningEntity.Id}]. Please create a new property to add it to this Entity[{this.Id}].");
+            Console.WriteLine($"This property has already been added to a different Entity[{property.OwningEntity.Id}]. Please create a new property to add it to this Entity[{this.Id}].");
             return;
         }
 

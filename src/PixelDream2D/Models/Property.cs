@@ -5,14 +5,14 @@ namespace PixelDream2D.Models;
 
 public abstract class Property : Disposable {
 
-    protected internal Entity owningEntity { get; internal set; }
+    protected internal Entity OwningEntity { get; internal set; }
 
-    protected internal string name { get; internal set; }
+    protected internal string Name { get; internal set; }
 
     public bool HasInitialized { get; private set; }
 
     protected Property(Entity entity) {
-        owningEntity = entity;
+        OwningEntity = entity;
     }
 
     protected internal virtual void Init() {
@@ -25,7 +25,7 @@ public abstract class Property : Disposable {
 
     protected override void Dispose(bool disposing) {
         if (disposing) {
-            owningEntity.Properties.Remove(GetType());
+            OwningEntity.Properties.Remove(GetType());
         }
     }
 }

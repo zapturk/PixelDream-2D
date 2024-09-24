@@ -7,21 +7,21 @@ public class Rotation : Property
     /// <summary>
     /// The value of the rotation
     /// </summary>
-    private float value;
+    private float _value;
 
     public Rotation(Entity entity, float rotation) : base(entity)
     {
-        value = rotation;
-        name = "Rotation";
+        _value = rotation;
+        Name = "Rotation";
     }
 
-    public float getRotation()
+    public float GetRotation()
     {
-        return value;
+        return _value;
     }
 
-    public void setRotation(float rotation)
+    public void SetRotation(float rotation)
     {
-        value = rotation % 360;
+        _value = rotation % 360;
     }
 }

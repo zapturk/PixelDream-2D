@@ -6,14 +6,14 @@ namespace PixelDream2D.Models;
 
 public abstract class Scene : Disposable
 {
-    protected Game game { get; private set; }
+    protected Game Game { get; private set; }
     public bool HasInitialized { get; private set; }
-    private uint entityIds;
+    private uint _entityIds;
     internal Dictionary<uint, Entity> Entities { get; set; }
 
     public Scene(Game gameState)
     {
-        game = gameState;
+        Game = gameState;
 
         Entities = new Dictionary<uint, Entity>();
     }
@@ -51,9 +51,9 @@ public abstract class Scene : Disposable
             return;
         }
 
-        Entities.Add(entityIds, entity);
+        Entities.Add(_entityIds, entity);
 
-        entityIds++;
+        _entityIds++;
     }
 
     protected override void Dispose(bool disposing) {
@@ -62,7 +62,7 @@ public abstract class Scene : Disposable
                 entity.Dispose();
             }
             
-            entityIds = 0;
+            _entityIds = 0;
         }
     }
 }

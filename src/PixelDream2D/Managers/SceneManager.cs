@@ -12,15 +12,15 @@ public static class SceneManager
 {
     public static Scene? ActiveScene { get; private set; }
 
-    private static GameBase gameBase;
+    private static GameBase _gameBase;
 
     public static void Init(GameBase gameInstance)
     {
-        gameBase = gameInstance;
+        _gameBase = gameInstance;
         if (ActiveScene?.HasInitialized == false)
         {
             ActiveScene?.Init();
-            ActiveScene?.LoadContent(gameBase.Content);
+            ActiveScene?.LoadContent(_gameBase.Content);
         }
     }
 
@@ -62,6 +62,6 @@ public static class SceneManager
         ActiveScene.Init();
 
         // Load content for the new scene
-        ActiveScene.LoadContent(gameBase.Content);
+        ActiveScene.LoadContent(_gameBase.Content);
     }
 }
