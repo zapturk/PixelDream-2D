@@ -31,9 +31,11 @@ public class Game1 : GameBase
     {
          if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
-        // TODO: Add your update logic here
+         // TODO: Add your update logic here
+         
+         
 
-        base.Update(gameTime);
+         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)

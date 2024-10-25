@@ -23,7 +23,13 @@ public abstract class Scene : Disposable
         HasInitialized = true;
     }
 
-    public abstract void LoadContent(ContentManager content);
+    protected internal virtual void LoadContent(ContentManager content)
+    {
+        foreach (Entity entity in Entities.Values)
+        {
+            entity.LoadContent(content);
+        }
+    }
 
     protected internal virtual void Update(GameTime gameTime){
 

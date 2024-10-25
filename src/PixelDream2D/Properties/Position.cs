@@ -25,5 +25,4 @@ public class Position : Property
     {
         _value = pos;
     }
-
 }

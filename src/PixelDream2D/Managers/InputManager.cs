@@ -11,10 +11,12 @@ public static class InputManager
     public static void Init(Game game)
     {
         inputManager = new InputHandler(game);
-        if(inputManager.FindNewGamepads()){
-            inputManager.SetActivePlayers(new List<int> { 0 });
-            inputManager.GetCapabilities(0);
-        }
+        
+        // if there are no controllers connected exit
+        if (!inputManager.FindNewGamepads()) return;
+        
+        inputManager.SetActivePlayers([0]);
+        inputManager.GetCapabilities(0);
     }
 
     public static void Update(GameTime gameTime)

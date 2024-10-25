@@ -1,5 +1,6 @@
 using PixelDream2D.Managers;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace PixelDream2D.Models;
@@ -25,6 +26,11 @@ public abstract class Entity : Disposable
             }
         }
         HasInitialized = true;
+    }
+
+    protected internal virtual void LoadContent(ContentManager contentManager)
+    {
+        
     }
 
     protected internal virtual void Update(GameTime gameTime)
