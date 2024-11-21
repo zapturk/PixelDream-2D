@@ -1,15 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using PixelDream2D.Models;
 
 namespace PixelDream2D.Test;
 
 public class Game1 : GameBase
 {
     Texture2D texture2D;
+    AnimatedSprite playerSprite;
 
     public Game1(GameSettings settings) : base(settings)
     {
+        playerSprite = new AnimatedSprite(Vector2.Zero, 0.0f, 1.0f, 1.0f);
     }
 
     protected override void Initialize()
@@ -22,8 +25,9 @@ public class Game1 : GameBase
     {
         base.LoadContent();
 
-        texture2D = Content.Load<Texture2D>("test");
-
+        //texture2D = Content.Load<Texture2D>("test");
+        
+        playerSprite.Load(Content, "test", 4, 8);
         // TODO: use this.Content to load your game content here
     }
 
@@ -32,8 +36,7 @@ public class Game1 : GameBase
          if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
          // TODO: Add your update logic here
-         
-         
+         playerSprite.UpdateFrame((float)gameTime.ElapsedGameTime.TotalSeconds);
 
          base.Update(gameTime);
     }
@@ -44,7 +47,9 @@ public class Game1 : GameBase
         // TODO: Add your drawing code here 
 
         spriteBatch.Begin();
-        spriteBatch.Draw(texture2D, new Vector2(100, 100), Color.White);
+        //spriteBatch.Draw(texture2D, new Vector2(100, 100), Color.White);
+        playerSprite.DrawFrame(spriteBatch, new Vector2(100, 100));
+        
         spriteBatch.End();
         base.Draw(gameTime);
     }

@@ -6,7 +6,7 @@ namespace PixelDream2D.Models;
 public class Sprite(Texture2D texture, Vector2 position)
 {
     private readonly Texture2D Texture = texture;
-    private Vector2 Position { get; set; } = position;
+    private readonly Vector2 Position = position;
 
     public virtual void Draw(SpriteBatch spriteBatch)
     {
